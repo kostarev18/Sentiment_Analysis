@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis App</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="text" placeholder="Please enter your text here..."></textarea>
+        <button type="submit">Let's analyze</button>
+    </form>
+
+    {% if sentiment %}
+        <h2>Result: {{ sentiment }}</h2>
+    {% endif %}
+</body>
+</html>
